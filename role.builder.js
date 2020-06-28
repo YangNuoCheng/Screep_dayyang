@@ -5,11 +5,11 @@ var roleBuilder = {
 
      if(creep.memory.building && creep.store[RESOURCE_ENERGY] == 0) {
             creep.memory.building = false;
-            creep.say('🔄 harvest');
+            creep.say('采集中');
      }
      if(!creep.memory.building && creep.store.getFreeCapacity() == 0) {
          creep.memory.building = true;
-         creep.say(' build');
+         creep.say('建造中');
      }
 
      if(creep.memory.building) {
@@ -23,6 +23,7 @@ var roleBuilder = {
      else {
          var sources = creep.room.find(FIND_SOURCES);
             if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
+                creep.say('返回啦');
                 creep.moveTo(sources[0], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
      }
