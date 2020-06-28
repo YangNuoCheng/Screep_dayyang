@@ -1,6 +1,9 @@
 创建新Creep
-Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1')
-Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Upgrader1' )
+Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1',{ memory: { role: 'harvester' } })
+Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Upgrader1',{ memory: { role: 'upgrader'}})
+Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Builder1',{ memory: { role: 'builder' } } );
+
+Game.spawns['Spawn1'].spawnCreep( [WORK,WORK,WORK,WORK,CARRY,MOVE,MOVE],'HarvesterBig',{ memory: { role: 'harvester' } } );
 Creep的归类
 Game.creeps['Upgrader1'].memory.role = 'upgrader';
 Game.creeps['Harvester1'].memory.role = 'harvester';
