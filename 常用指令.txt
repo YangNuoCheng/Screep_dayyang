@@ -1,0 +1,2 @@
+创建新Creep
+Game.spawns['Myfirst'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1')
