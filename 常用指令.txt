@@ -1,2 +1,6 @@
 创建新Creep
-Game.spawns['Myfirst'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1')
+Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1')
+Game.spawns['MyFirstTry'].spawnCreep( [WORK, CARRY, MOVE], 'Upgrader1' )
+Creep的归类
+Game.creeps['Upgrader1'].memory.role = 'upgrader';
+Game.creeps['Harvester1'].memory.role = 'harvester';
