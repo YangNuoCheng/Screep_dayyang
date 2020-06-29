@@ -1,5 +1,6 @@
 var roleBuilder = {
 // Builders必须升级为二级控制器后才能建造储能的空间
+// 选择顶部最右侧一栏添加物品
     /** @param {Creep} creep **/
     run: function(creep) {
 
