@@ -38,7 +38,7 @@ module.exports.loop = function () {
     // Upgrader新建
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     // console.log('upgraders: ' + builders.length);
-    if(upgraders.length < 15) {
+    if(upgraders.length < 20) {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
         Game.spawns['MyFirstTry'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE,MOVE], newName, 
@@ -87,7 +87,7 @@ module.exports.loop = function () {
             rolePatrolSoldier.run(creep);
         }
         if(creep.memory.role == 'repairer'){
-            roleRepairer.run(creep)
+            roleRepairer.run(creep);
         }
     }
 }
